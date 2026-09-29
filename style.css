@@ -1,0 +1,219 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+
+}
+
+* {
+    transition: all ease 0.5s;
+}
+
+.app {
+    background-image: url('/assets/background.png');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.brand-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 80%;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.logo-brand {
+    width: 240px;
+
+}
+.title-brand {
+    font-weight: 600;
+    font-size: 80px;
+    margin: 0px;
+    background: #6E93FB;
+    background: linear-gradient(to right, #6E93FB 0%, #9083F9 50%, #E292E7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.slogan-brand {
+    font-size: 20px;
+    margin: 0px;
+    margin-bottom: 20px;
+    color: #57598a;
+}
+
+.subtitle-brand {
+    font-size: 20px;
+    text-align: center;
+    color: #565656;
+}
+
+/* ================== */
+/* right */
+/* ================== */
+.login-section {
+    display: flex;
+    background-color: #f8f9fe;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 50px;
+    width: 500px;
+    filter: drop-shadow(0px 0px 20px rgb(217, 215, 215));
+}
+
+
+.login-section * {
+    opacity: 100%;
+}
+
+.login-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #2f338b;
+    margin: 0px;
+}
+
+.login-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input-top {
+    margin-bottom: 30px;
+
+}
+
+.login-input {
+    padding: 20px;
+    padding-left: 60px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: larger;
+    background: #F8F9FE;
+    background: linear-gradient(90deg, rgba(248, 249, 254, 1) 0%, rgba(245, 245, 245, 1) 31%, rgba(248, 249, 254, 1) 100%);
+    transition: border 0.5s ease;
+
+}
+
+.icon-email {
+    opacity: 50%;
+    position: absolute;
+    left: 70px;
+    top: 200px;
+    width: 30px;
+}
+.icon-password {
+    opacity: 50%;
+    position: absolute;
+    left: 70px;
+    top: 295px;
+    width: 30px;
+}
+
+.forget-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007BFF;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-input {
+    margin-right: 5px;
+}
+
+.forget-password-link {
+    text-decoration: none;
+}
+
+.login-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: #6E93FB;
+    background: linear-gradient(90deg, rgba(110, 147, 251, 1) 0%, rgba(144, 131, 249, 1) 50%, rgba(226, 146, 231, 1) 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: larger;
+    transition: filter 0.5s ease;
+
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    color: #777a97;
+}
+
+.login-with {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-another-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 50px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: #f8f9fe;
+    cursor: pointer;
+    transition: padding 0.5s ease, filter 0.5s ease;
+}
+
+.registration {
+    text-align: center;
+}
+
+
+
+/* ============ */
+/* hover */
+/* ============ */
+
+.login-input:hover {
+    border: 1px solid;
+    transition: border 0.5s ease;
+
+}
+
+.login-button:hover {
+    filter: drop-shadow(0px 0px 10px rgb(212, 212, 212));
+    transition: filter 0.5s ease;
+}
+
+.button-another-login:hover {
+    padding: 20px 55px;
+    filter: drop-shadow(0px 0px 10px rgb(227, 227, 227));
+    transition: padding 0.5s ease, filter 0.5s ease;
+
+}
