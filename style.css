@@ -2,7 +2,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Fredoka", sans-serif;
-
 }
 
 * {
@@ -95,7 +94,6 @@ body {
 
 .login-input-top {
     margin-bottom: 30px;
-
 }
 
 .login-input {
@@ -192,8 +190,6 @@ body {
 .registration {
     text-align: center;
 }
-
-
 
 /* ============ */
 /* hover */
