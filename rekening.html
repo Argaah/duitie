@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekening & E-Wallet - Duitie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="profil">
+
+    <div class="app-page">
+        <header>
+            <div class="logo">
+                <h1>Duitie</h1>
+            </div>
+            <h2>Rekening &amp; E-Wallet</h2>
+        </header>
+
+        <main>
+            <!-- Ringkasan -->
+            <section class="card hero">
+                <h3>Total Saldo</h3>
+                <div class="big" id="totalSaldo">Rp 0</div>
+                <div class="sub" id="totalSub">Memuat...</div>
+                <div class="hero-actions">
+                    <button type="button" class="chip" id="btnAddAcc"><i class="fa-solid fa-plus"></i> Tambah rekening</button>
+                    <button type="button" class="chip" id="btnTransfer"><i class="fa-solid fa-right-left"></i> Transfer</button>
+                    <button type="button" class="chip" id="btnBrick"><i class="fa-solid fa-link"></i> Hubungkan bank</button>
+                    <button type="button" class="chip" id="btnBrickSync"><i class="fa-solid fa-rotate"></i> Sinkron bank</button>
+                </div>
+            </section>
+
+            <!-- Daftar rekening -->
+            <div id="accountList"><div class="card skeleton">Memuat...</div></div>
+
+            <!-- Penjelasan -->
+            <section class="card">
+                <h3>Cara Duitie melacak saldo</h3>
+                <div class="notice">
+                    <b>Catat manual</b> - pilih rekening saat mencatat transaksi di Buku Kas.<br>
+                    <b>Hubungkan bank</b> - login resmi lewat halaman Brick (penyedia open banking), Duitie tidak melihat PIN atau password bankmu. Mutasi dan saldo ditarik lewat tombol <b>Sinkron bank</b>.<br>
+                    <b>Impor mutasi</b> - unduh mutasi (CSV) dari internet banking / aplikasi e-wallet, lalu impor di sini. Transaksi dikategorikan otomatis dan tidak akan terduplikasi.<br><br>
+                    Duitie <b>tidak pernah meminta PIN, password, atau OTP bank</b>-mu. Saat ini bank di Indonesia belum menyediakan API gratis untuk data rekening perorangan, karena itu cara di atas yang dipakai.
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" id="bottomNav"></nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/bank.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/realtime.js"></script>
+    <script src="js/rekening.js"></script>
+</body>
+</html>

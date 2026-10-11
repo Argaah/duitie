@@ -1,0 +1,158 @@
+/* Pengaturan dasar halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0fa;
+    color: #333;
+    margin: 0;
+    padding: 25px;
+    line-height: 1.6;
+}
+
+/* Judul halaman */
+h1 {
+    color: #6a1b9a;
+    text-align: center;
+    background-color: #e6d5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #7b2cbf;
+    border-bottom: 2px solid #c9a7e8;
+    padding-bottom: 8px;
+    margin-top: 25px;
+}
+
+/* Pilihan periode */
+select {
+    padding: 8px 12px;
+    border: 1px solid #b58bd5;
+    border-radius: 5px;
+    background-color: white;
+    color: #4a148c;
+    margin-left: 5px;
+}
+
+label {
+    margin-right: 8px;
+}
+
+/* Pilihan tampilan */
+input[type="radio"] {
+    accent-color: #8e44ad;
+    margin-left: 5px;
+}
+
+/* Garis pemisah */
+hr {
+    border: none;
+    border-top: 1px solid #d8c2e8;
+    margin: 25px 0;
+}
+
+/* Tabel rekap dan pengeluaran */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px;
+    background-color: white;
+    border: 1px solid #d8c2e8;
+    box-shadow: 0 2px 6px rgba(90, 40, 120, 0.08);
+}
+
+/* Judul kolom */
+th {
+    background-color: #7b2cbf;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Isi tabel */
+td {
+    padding: 12px;
+    border: 1px solid #e2d4ed;
+}
+
+/* Warna baris tabel */
+tr:nth-child(even) {
+    background-color: #f3eafa;
+}
+
+tr:hover {
+    background-color: #e9d8f5;
+}
+
+/* Tabel rekap kas */
+table:first-of-type td {
+    padding: 12px;
+}
+
+/* Grafik persentase */
+progress {
+    width: 130px;
+    height: 15px;
+    accent-color: #8e44ad;
+    vertical-align: middle;
+}
+
+/* Tombol unduh */
+button {
+    background-color: #7b2cbf;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #5a189a;
+}
+
+/* Menu navigasi */
+nav {
+    background-color: #6a1b9a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e1bee7;
+    text-decoration: underline;
+}
+
+/* Tampilan layar kecil */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 7px;
+    }
+
+    progress {
+        width: 70px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}

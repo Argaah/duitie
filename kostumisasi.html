@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kustomisasi Kategori</title>
+    <link rel="stylesheet" href="css/kostumisasi.css">
+    <link rel="stylesheet" href="css/common.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Kustomisasi Kategori</h2>
+
+    <div id="daftarKategori"></div>
+
+    <button class="tambah" onclick="tambahKategori()">
+        + Tambah Kategori
+    </button>
+
+    <div class="form" id="formKategori">
+        <input
+            type="text"
+            id="namaKategori"
+            placeholder="Masukkan nama kategori"
+        >
+
+        <button class="simpan" onclick="simpanKategori()">
+            Simpan
+        </button>
+    </div>
+
+</div>
+
+    <a class="back-link" href="profile.html">← Kembali ke Profil</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/kostumisasi.js"></script>
+</body>
+</html>

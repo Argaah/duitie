@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Duitie membantu kamu mengelola penghasilan dan pengeluaran dengan lebih mudah."
+    >
+    <meta name="theme-color" content="#f8f9fe">
+
+    <title>Daftar | Duitie</title>
+
+    <link rel="icon" href="assets/logo.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body>
+    <main class="app">
+
+        <!-- BRAND -->
+        <section class="brand-section" aria-label="Tentang Duitie">
+            <img
+                class="logo-brand"
+                src="assets/logo.png"
+                alt="Logo Duitie"
+                width="220"
+                height="220"
+            >
+
+            <h1 class="title-brand">duitie</h1>
+
+            <p class="slogan-brand">
+                Duit Utility for Tracking Income &amp; Expense
+            </p>
+
+            <p class="subtitle-brand">
+                Kelola penghasilan dan pengeluaranmu dengan lebih mudah,
+                untuk masa depan yang lebih baik.
+            </p>
+        </section>
+
+        <!-- REGISTER -->
+        <section class="login-section" aria-labelledby="login-title">
+
+            <header class="login-header">
+                <h2 class="login-title" id="login-title">Buat Akun</h2>
+                <p class="login-subtitle">
+                    Daftar untuk mulai mencatat penghasilan dan pengeluaranmu.
+                </p>
+            </header>
+
+            <form class="login-form" id="register-form">
+
+                <div class="form-group">
+                    <label class="input-label" for="nama">
+                        Nama Lengkap
+                    </label>
+
+                    <div class="input-wrapper">
+                        <img class="input-icon" src="assets/email.png" alt="" aria-hidden="true" width="22" height="22">
+
+                        <input
+                            class="login-input"
+                            type="text"
+                            id="nama"
+                            name="nama"
+                            placeholder="Nama lengkap"
+                            autocomplete="name"
+                            maxlength="60"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="input-label" for="email">
+                        Email
+                    </label>
+
+                    <div class="input-wrapper">
+                        <img class="input-icon" src="assets/email.png" alt="" aria-hidden="true" width="22" height="22">
+
+                        <input
+                            class="login-input"
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="nama@email.com"
+                            autocomplete="email"
+                            autocapitalize="none" spellcheck="false"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="input-label" for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+                        <img class="input-icon" src="assets/password.png" alt="" aria-hidden="true" width="22" height="22">
+
+                        <input
+                            class="login-input"
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Minimal 8 karakter"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="input-label" for="konfirmasi">
+                        Konfirmasi Password
+                    </label>
+
+                    <div class="input-wrapper">
+                        <img class="input-icon" src="assets/password.png" alt="" aria-hidden="true" width="22" height="22">
+
+                        <input
+                            class="login-input"
+                            type="password"
+                            id="konfirmasi"
+                            name="konfirmasi"
+                            placeholder="Ulangi password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button class="login-button" type="submit">
+                    <span>Daftar</span>
+                </button>
+            </form>
+
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+
+            <p class="registration">
+                Sudah punya akun?
+                <a href="index.html">Masuk di sini</a>
+            </p>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

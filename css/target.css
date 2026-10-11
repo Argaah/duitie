@@ -1,0 +1,233 @@
+:root {
+  --ink: #2b2550;
+  --ink-soft: #5d5886;
+  --indigo: #6c5ce0;
+  --orchid: #b07ce0;
+  --peri: #7a8fe8;
+  --mist: #efebff;
+  --card: rgba(255, 255, 255, 0.78);
+  --line: rgba(108, 92, 224, 0.18);
+  --ok: #2f9e7a;
+  --warn: #d4693c;
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--mist) url("../assets/background.png") center / cover fixed no-repeat;
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+/* Header */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.logo { width: 130px; height: 100px; margin: -10px -14px -10px -20px; object-fit: contain; flex-shrink: 0; }
+h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; }
+.top p { margin: 4px 0 0; color: var(--ink-soft); max-width: 52ch; }
+h2 { margin: 0 0 14px; font-size: 1.15rem; font-weight: 700; }
+
+/* Ringkasan */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 24px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+.stat { display: flex; flex-direction: column; }
+.stat-label { font-size: 0.85rem; color: var(--ink-soft); }
+.stat strong { font-size: clamp(1.2rem, 3vw, 1.7rem); font-weight: 800; }
+.overall {
+  grid-column: 1 / -1;
+  height: 12px;
+  background: rgba(108, 92, 224, 0.12);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.overall-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--indigo), var(--orchid));
+  border-radius: 99px;
+  transition: width 0.7s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* Layout */
+.layout { display: grid; grid-template-columns: 320px 1fr; gap: 24px; align-items: start; }
+
+.panel {
+  position: sticky;
+  top: 20px;
+  padding: 22px;
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+form { display: grid; gap: 12px; }
+label { display: grid; gap: 4px; font-size: 0.85rem; font-weight: 500; color: var(--ink-soft); }
+
+input, select {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  color: var(--ink);
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+input:focus-visible, select:focus-visible, .btn:focus-visible, .icon-btn:focus-visible {
+  outline: 3px solid rgba(108, 92, 224, 0.4);
+  outline-offset: 2px;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #5b3fd1, #8a5fd6);
+  border: 0;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(108, 92, 224, 0.3); }
+.btn.ghost {
+  width: 100%;
+  margin-top: 10px;
+  color: var(--indigo);
+  background: transparent;
+  border: 1px dashed var(--indigo);
+}
+.btn.ghost:hover { box-shadow: none; background: rgba(108, 92, 224, 0.07); }
+
+/* Daftar target */
+.list-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.list-head h2 { margin: 0; }
+.list-head select { width: auto; }
+.goal-list { display: grid; gap: 16px; margin-top: 12px; }
+
+.goal {
+  padding: 20px 22px;
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--indigo);
+  border-radius: 20px;
+}
+.goal.done { border-left-color: var(--ok); }
+.goal.late { border-left-color: var(--warn); }
+
+.goal-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.goal h3 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+.tag { display: inline-block; margin-top: 4px; padding: 2px 10px; font-size: 0.75rem; font-weight: 500; color: var(--indigo); background: rgba(108, 92, 224, 0.1); border-radius: 99px; }
+.status { font-size: 0.8rem; font-weight: 700; white-space: nowrap; }
+.status.done { color: var(--ok); }
+.status.late { color: var(--warn); }
+
+.amounts { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin: 14px 0 8px; flex-wrap: wrap; }
+.amounts strong { font-size: 1.3rem; font-weight: 800; }
+.amounts span { color: var(--ink-soft); font-size: 0.9rem; }
+
+.bar { height: 12px; background: rgba(108, 92, 224, 0.12); border-radius: 99px; overflow: hidden; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, var(--peri), var(--indigo)); border-radius: 99px; transition: width 0.6s cubic-bezier(.2, .8, .2, 1); }
+.goal.done .bar-fill { background: var(--ok); }
+
+.meta { display: flex; justify-content: space-between; gap: 8px; margin: 8px 0 14px; font-size: 0.85rem; color: var(--ink-soft); flex-wrap: wrap; }
+
+.deposit { display: flex; gap: 8px; align-items: center; }
+.deposit input { flex: 1; min-width: 0; }
+.deposit .btn { padding: 10px 14px; font-size: 0.9rem; }
+.icon-btn {
+  font: inherit;
+  padding: 9px 12px;
+  color: var(--warn);
+  background: transparent;
+  border: 1px solid rgba(212, 105, 60, 0.35);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.icon-btn:hover { background: rgba(212, 105, 60, 0.08); }
+
+.empty { padding: 28px; text-align: center; color: var(--ink-soft); background: var(--card); border: 1px dashed var(--line); border-radius: 20px; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  padding: 12px 20px;
+  color: #fff;
+  font-weight: 500;
+  background: var(--ink);
+  border-radius: 14px;
+  opacity: 0;
+  transform: translate(-50%, 12px);
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* Responsif */
+@media (max-width: 820px) {
+  .wrap { padding: 20px 14px 48px; }
+  .logo { width: 96px; height: 76px; }
+  .top p { font-size: 0.9rem; }
+  .deposit { flex-wrap: wrap; }
+  .deposit input { flex: 1 1 100%; }
+  .deposit .btn { flex: 1; }
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .panel { position: static; }
+  .summary { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* Aksi kartu target: setor / ambil / riwayat */
+.deposit .btn.out { background: linear-gradient(135deg, #c2563a, #dd7a52); }
+.deposit .btn:disabled { opacity: .55; cursor: default; transform: none; box-shadow: none; }
+.goal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 10px; }
+.icon-btn.soft { color: var(--indigo); border-color: rgba(108, 92, 224, 0.35); }
+.icon-btn.soft:hover { background: rgba(108, 92, 224, 0.08); }
+
+.history { margin-top: 12px; padding: 12px 14px; background: rgba(255, 255, 255, 0.7); border: 1px solid var(--line); border-radius: 14px; }
+.history h4 { margin: 0 0 8px; font-size: .85rem; color: var(--ink); }
+.hist-empty { margin: 0; font-size: .85rem; color: var(--ink-soft); }
+.hist-list { list-style: none; margin: 0; padding: 0; max-height: 280px; overflow: auto; }
+.hist-item { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.hist-item:last-child { border-bottom: 0; }
+.hist-ico { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-size: .9rem; font-weight: 800; }
+.hist-item.setor .hist-ico { color: #1f7a5c; background: rgba(47, 158, 122, .15); }
+.hist-item.tarik .hist-ico { color: #b4491f; background: rgba(212, 105, 60, .15); }
+.hist-main strong { display: block; font-size: .88rem; }
+.hist-main small { display: block; color: var(--ink-soft); font-size: .76rem; line-height: 1.35; word-break: break-word; }
+.hist-amt { text-align: right; font-weight: 800; font-size: .92rem; white-space: nowrap; }
+.hist-amt small { display: block; font-weight: 500; font-size: .72rem; color: var(--ink-soft); }
+.hist-item.setor .hist-amt > span { color: #1f7a5c; }
+.hist-item.tarik .hist-amt > span { color: #b4491f; }

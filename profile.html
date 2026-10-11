@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - Duitie</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+
+<body data-page="profil">
+
+    <!-- Container utama aplikasi -->
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>👤 Profil Saya</h1>
+            <p><span id="salam">Halo</span>, <span id="nama-pengguna"></span></p>
+        </header>
+
+
+        <!-- Foto Profil -->
+        <section class="profile">
+            <div class="profile-upload">
+                <div class="avatar-preview">
+                    <img src="assets/default-avatar.svg" alt="Foto Profil" id="profile-img">
+                </div>
+                <label for="file-input" class="upload-btn">Pilih Foto</label>
+                <input type="file" id="file-input" accept="image/*">
+            </div>
+        </section>
+
+        <!-- Pengaturan Akun -->
+        <section class="account-settings">
+            <h2>PENGATURAN AKUN</h2>
+
+            <div class="menu-item">
+               
+                <span style="color: plum;">
+                    
+                    <i class="fa-solid fa-user"></i></span>
+
+                <a href="datadiri.html">
+                    <button>Ubah Data Diri</button>
+                </a>
+            </div>
+
+            <div class="menu-item">
+        
+                <span style="color: plum;">
+                    
+                    <i class="fa-solid fa-shield-halved"></i></span>
+                <a href="password.html">
+                    <button>Keamanan & Password</button>
+                </a>
+            </div>
+
+            <div class="menu-item">             
+                 <span style="color: plum;">
+                    
+                    <i class="fa-solid fa-building-columns"></i></span>
+
+                <a href="rekening.html">
+                    <button>Rekening &amp; E-Wallet</button>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                 <span style="color: plum;">
+                    
+                    <i class="fa-solid fa-bell"></i></span>
+
+                <a href="notif.html">
+                    <button>Notifikasi & Pengingat</button>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <span style="color: plum;">
+
+                    <i class="fa-solid fa-right-from-bracket"></i></span>
+                <a href="#" data-logout>
+                    <button type="button">Keluar</button>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- Buku Catatan -->
+        <section class="notebook">
+            <h2>📒 BUKU CATATAN</h2>
+
+            <div class="menu-item">
+                <span>⚙️</span>
+                <a href="kostumisasi.html">
+                    <button>Kustomisasi Kategori</button>
+                </a>
+            </div>
+            
+            <div class="menu-item">
+                <span>📄</span>
+                <a href="excel.html">
+                    <button>Ekspor data (PDF/Excel)</button>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* Tambahan kecil untuk Beranda & Buku Kas (dipakai bersama css/laporan.css) */
+form.kas-form {
+    background-color: white;
+    border: 1px solid #d8c2e8;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(90, 40, 120, 0.08);
+}
+
+form.kas-form label {
+    display: block;
+    margin: 10px 0 4px;
+    font-weight: bold;
+    color: #4a148c;
+}
+
+form.kas-form input[type="text"],
+form.kas-form input[type="number"],
+form.kas-form input[type="date"],
+form.kas-form select {
+    width: 100%;
+    margin-left: 0;
+    padding: 9px 12px;
+    border: 1px solid #b58bd5;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+form.kas-form .tipe {
+    margin-top: 6px;
+}
+
+form.kas-form button[type="submit"] {
+    margin-top: 16px;
+}
+
+td.masuk { color: #1b7f4b; font-weight: bold; }
+td.keluar { color: #b3261e; font-weight: bold; }
+
+td.angka, th.angka { text-align: right; }
+
+button.hapus {
+    background-color: #b3261e;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+button.hapus:hover {
+    background-color: #8c1d18;
+}
+
+.kosong {
+    text-align: center;
+    color: #7a6a88;
+    padding: 18px;
+}
+
+.salam {
+    text-align: center;
+    color: #6a1b9a;
+}

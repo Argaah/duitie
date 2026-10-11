@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi</title>
+    <link rel="stylesheet" href="css/notif.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+    <h1>🔔 Notifikasi</h1>
+
+    <p>Atur notifikasi yang ingin kamu terima.</p>
+
+    <hr>
+
+    <form id="formNotifikasi">
+
+        <label>
+            <input type="checkbox" id="transaksi">
+            Notifikasi Transaksi
+        </label>
+
+        <p>
+            Mendapatkan notifikasi saat ada transaksi.
+        </p>
+
+        <br>
+
+
+        <label>
+            <input type="checkbox" id="pembayaran">
+            Pengingat Pembayaran
+        </label>
+
+        <p>
+            Mendapatkan pengingat mengenai pembayaran.
+        </p>
+
+        <br>
+
+
+        <label>
+            <input type="checkbox" id="promo">
+            Promo & Informasi
+        </label>
+
+        <p>
+            Mendapatkan informasi dan promo terbaru.
+        </p>
+
+        <br>
+
+
+        <label>
+            <input type="checkbox" id="email">
+            Notifikasi Email
+        </label>
+
+        <p>
+            Menerima notifikasi melalui email.
+        </p>
+
+        <br>
+
+        <button type="submit">
+            Simpan Pengaturan
+        </button>
+
+    </form>
+
+    <a class="back-link" href="profile.html">← Kembali ke Profil</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/notif.js"></script>
+</body>
+</html>

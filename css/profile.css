@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+
+    font-family: 'Fredoka';
+    src: url('../assets/Fredoka-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#file-input {
+  display: none;
+}
+
+.profile-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-family: sans-serif;
+}
+
+.avatar-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-btn {
+  padding: 8px 16px;
+  background-color: #ce97e4;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+
+
+body {
+  font-family: 'fredoka', sans-serif;
+  text-align: center;
+  background-image: url('../assets/Background.PNG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: 'Fredoka', serif;
+  font-weight: bold;
+}
+
+header {
+  font-family: 'Fredoka';
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.account-settings {   /*cek lagi ukuran*/
+  background-color: #ffffff;
+  border-radius: 20px;  /* biar lengkung */
+  border : 2px solid #e5e5ea;
+  padding: 20px 24px;
+  max-width: 380px; /* biar ga kelebaran di hp */
+  margin: 20px auto;
+  font-family: 'Fredoka';
+    src: url('../assets/Fredoka-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+.account-settings h2 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.account-settings .menu-item {
+  display: flex; /*biar ga kaku*/
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 2px solid #e5e5ea; 
+}
+
+.account-settings .menu-item:last-of-type {
+  border-bottom: none; /*ilangin border paling bawah*/  
+}
+
+.account-settings .menu-item > span {
+  font-size: 18px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.account-settings .menu-item a {
+  flex-grow: 1;
+  text-decoration: none; /* biar gada garis */
+  display: block;
+}
+
+.account-settings .menu-item button {
+  width: 100%;
+  background: none; /* ilangin tombol */
+  border: none;  /* ilangin border */
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color:black;
+  cursor: pointer; /*jadi tangan*/
+  font-family: inherit;  /*ngikut*/
+  align-items: center;
+}
+
+.account-settings .menu-item:hover {
+  background-color: #fafafa;
+  border-radius: 4px; /*biar lengkung kotak e*/
+}
+
+.notebook {
+  background-color: #ffffff;
+  border-radius: 20px; /*lengkung*/
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 380px; /*ikut atas*/
+  margin: 20px auto;
+  font-family: inherit;
+}
+
+.notebook h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.notebook .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5ea;
+}
+
+.notebook .menu-item:last-of-type {
+  border-bottom: none; /*ilangin border paling bawah*/  
+}
+
+.notebook .menu-item > span {
+  font-size: 18px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.notebook .menu-item a {
+  flex-grow: 1;
+  text-decoration: none; /* biar gada garis */
+  display: block;
+}
+
+.notebook .menu-item button {
+  width: 100%;
+  background: none; /* ilangin tombol */
+  border: none;  /* ilangin border */
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color:black;
+  cursor: pointer; /*jadi tangan*/
+  font-family: inherit;  /*ngikut*/
+  align-items: center;
+}
+
+.notebook .menu-item:hover {
+  background-color: #fafafa;
+  border-radius: 4px; /*biar lengkung kotak e*/
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Target Keuangan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/target.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+<body data-page="target">
+  <main class="wrap">
+    <header class="top">
+      <img src="assets/logo.png" alt="Logo aplikasi" class="logo">
+      <div>
+        <h1>Target Keuangan</h1>
+        <p>Tentukan tujuanmu, catat tabunganmu, dan lihat seberapa dekat kamu dengannya.</p>
+      </div>
+    </header>
+
+    <!-- Ringkasan -->
+    <section class="summary" aria-label="Ringkasan target">
+      <div class="stat">
+        <span class="stat-label">Total terkumpul</span>
+        <strong id="sumSaved">Rp 0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Total target</span>
+        <strong id="sumTarget">Rp 0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Target tercapai</span>
+        <strong id="sumDone">0 dari 0</strong>
+      </div>
+      <div class="overall" role="progressbar" aria-label="Progres keseluruhan" aria-valuemin="0" aria-valuemax="100" id="overallBar">
+        <div class="overall-fill" id="overallFill"></div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <!-- Form tambah target -->
+      <section class="panel">
+        <h2>Tambah target baru</h2>
+        <form id="goalForm" autocomplete="off">
+          <label>Nama target
+            <input type="text" id="name" placeholder="Contoh: Dana darurat" maxlength="40" required>
+          </label>
+          <label>Nominal target (Rp)
+            <input type="number" id="target" placeholder="10000000" min="1000" step="1000" required>
+          </label>
+          <label>Sudah terkumpul (Rp)
+            <input type="number" id="saved" placeholder="0" min="0" step="1000" value="0">
+          </label>
+          <label>Tercapai pada
+            <input type="date" id="deadline" required>
+          </label>
+          <label>Kategori
+            <select id="category">
+              <option>Dana darurat</option>
+              <option>Pendidikan</option>
+              <option>Rumah</option>
+              <option>Kendaraan</option>
+              <option>Liburan</option>
+              <option>Gadget</option>
+              <option>Lainnya</option>
+            </select>
+          </label>
+          <button type="submit" class="btn">Simpan target</button>
+        </form>
+        <button type="button" class="btn ghost" id="sampleBtn">Isi dengan contoh target</button>
+      </section>
+
+      <!-- Daftar target -->
+      <section>
+        <div class="list-head">
+          <h2>Target kamu</h2>
+          <select id="filter" aria-label="Filter target">
+            <option value="all">Semua</option>
+            <option value="active">Sedang berjalan</option>
+            <option value="done">Tercapai</option>
+          </select>
+        </div>
+        <div id="goalList" class="goal-list"></div>
+        <p id="empty" class="empty" hidden>Belum ada target. Isi form di samping untuk membuat target pertamamu.</p>
+      </section>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+  <script src="js/target.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

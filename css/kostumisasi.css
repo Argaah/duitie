@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+@font-face {
+
+  font-family: 'Fredoka';
+  src: url('../assets/Fredoka-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'fredoka', sans-serif;
+  text-align: center;
+  background-image: url('../assets/Background.PNG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 380px; /*biar ga kelebaran*/
+}
+
+.kategori{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e5ea;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    background-color: #fafafa;
+}
+
+#daftarKategori .kategori:last-child {
+    border-bottom: none;
+}
+
+.kategori span {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+}
+
+.kategori div { /*biar edit dan hapus sejajar*/
+    display: flex;
+    gap: 8px;
+}
+
+.kategori button {
+    background: none;
+    width: 100%;
+    padding: 6px 102x;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button.tambah {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    background-color: #fafafa;
+    color: black;
+    margin-bottom: 12px;
+    border: 2px dashed lightskyblue;
+}
+
+button.tambah:hover {
+    background-color: lightskyblue;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #fafafa;
+    border-radius: 12px;
+    background-color: #fafafa;
+    color: black;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+button.simpan {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    background-color: #fafafa;
+    color: black;
+}
+
+button.simpan:hover{
+    background-color: lightskyblue;
+}

@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+@font-face {
+
+  font-family: 'Fredoka';
+  src: url('../assets/Fredoka-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#file-input {
+  display: none;
+}
+
+body {
+  font-family: 'fredoka', sans-serif;
+  text-align: center;
+  background-image: url('../assets/Background.PNG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 900;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 380px; /*biar ga kelebaran*/
+}
+
+#formData {
+  background-color: #ffffff;
+  border-radius: 20px; /*lengkung*/
+  padding: 24px;
+  box-shadow: 0 4px 20px;
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box; /*biar ga kelebaran*/
+}
+
+#formData br {
+    display: none;/*biar br nya ga keliatan*/
+}
+
+#formData label {
+    display: block; /*biar yang lain turun*/
+    font-size: 14px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    text-transform: uppercase;/*biar hurufnya besar semua*/
+    letter-spacing: 1px;
+}
+
+#formData input[type="radio"] + label {
+    display: inline-block; /*biar nyamping*/
+    text-transform: none; /*biar ga uppercase lagi*/
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    margin: 0 20px 0 6px;/*spasi di gender*/
+    cursor: pointer;
+}
+
+#formData input[type="text"], /*biar cantik kolomnya*/
+#formData input[type="email"],
+#formData input[type="date"],
+#formData textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #e5e5ea;
+    border-radius: 12px;
+    background-color: #fafafa;
+    color:black;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+#formData input:focus, /*biar outline pas di klik cakep*/
+#formData textarea:focus {
+    outline: none;
+    border-color: lightskyblue;
+    background-color: #ffffff;
+}
+
+#formData textarea { /*biar fix ukurannya*/
+    resize: none;
+}
+
+#formData input[type="radio"] {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    accent-color: lightskyblue;
+    cursor: pointer;
+    transform: scale(1.2)
+}
+
+#formData button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#formData button[type="submit"] {
+    color: black;
+    margin-top:24px;
+    margin-bottom: 12px;
+}
+
+#formData button[type="submit"]:hover {
+    background-color:lightskyblue;
+}
+
+#formData button[type="button"] {
+    background-color: #ffffff;
+    color: crimson;
+}
+
+#formData button[type="button"]:hover {
+    background-color: #e5e5ea;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Data Diri</title>
+    <link rel="stylesheet" href="css/datadiri.css">
+</head>
+
+<body>
+
+    <h1>✏️ Ubah Data Diri</h1>
+
+    <form id="formData">
+
+        <label for="nama">Nama Lengkap</label><br>
+        <input 
+            type="text" 
+            id="nama" 
+            placeholder="Masukkan nama lengkap"
+        >
+        <br><br>
+
+        <label for="username">Username</label><br>
+        <input 
+            type="text" 
+            id="username" 
+            placeholder="Masukkan username"
+        >
+        <br><br>
+
+        <label for="email">Email</label><br>
+        <input 
+            type="email" 
+            id="email" 
+            placeholder="Masukkan email"
+        >
+        <br><br>
+
+        <label for="telepon">Nomor HP</label><br>
+        <input 
+            type="text" 
+            id="telepon" 
+            placeholder="Masukkan nomor HP"
+        >
+        <br><br>
+
+        <label for="tanggal">Tanggal Lahir</label><br>
+        <input 
+            type="date" 
+            id="tanggal"
+        >
+        <br><br>
+
+        <label>Jenis Kelamin</label><br>
+
+        <input 
+            type="radio" 
+            id="laki" 
+            name="gender" 
+            value="Laki-laki"
+        >
+        <label for="laki">Laki-laki</label>
+
+        <input 
+            type="radio" 
+            id="perempuan" 
+            name="gender" 
+            value="Perempuan"
+        >
+        <label for="perempuan">Perempuan</label>
+
+        <br><br>
+
+        <label for="alamat">Alamat</label><br>
+        <textarea 
+            id="alamat" 
+            rows="4" 
+            placeholder="Masukkan alamat"
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Simpan Perubahan
+        </button>
+
+        <button type="button" onclick="history.back()">
+            Batal
+        </button>
+
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/datadiri.js"></script>
+</body>
+</html>

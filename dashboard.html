@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Duitie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="home">
+
+    <div class="app-page">
+        <header>
+            <div class="logo">
+                <h1>Duitie</h1>
+            </div>
+            <h2><span id="salam">Halo</span>, <b id="nama-pengguna"></b>!</h2>
+            <div class="month-select" id="monthSelect">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span id="monthLabel"></span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </header>
+
+        <main>
+            <!-- Total saldo seluruh rekening -->
+            <section class="card hero">
+                <h3>Total Saldo Rekening &amp; E-Wallet</h3>
+                <div class="big" id="totalSaldo">Rp 0</div>
+                <div class="sub" id="totalSub">Memuat...</div>
+                <div class="hero-actions">
+                    <a class="chip" href="rekening.html"><i class="fa-solid fa-building-columns"></i> Kelola rekening</a>
+                </div>
+            </section>
+
+            <!-- Recap bulan terpilih -->
+            <section class="card">
+                <h3>Recap Buku Kas <small>(Hitungan Otomatis)</small></h3>
+                <div class="row">
+                    <span>Pemasukan:</span>
+                    <span class="text-green" id="incomeTotal">+Rp 0</span>
+                </div>
+                <div class="row">
+                    <span>Pengeluaran:</span>
+                    <span class="text-red" id="expenseTotal">-Rp 0</span>
+                </div>
+                <div class="row total-box">
+                    <span>SISA KAS:</span>
+                    <span id="balanceTotal">Rp 0</span>
+                </div>
+            </section>
+
+            <!-- Rekening -->
+            <section class="card">
+                <div class="card-head">
+                    <h3>Rekening &amp; E-Wallet</h3>
+                    <a class="card-link" href="rekening.html">Lihat semua</a>
+                </div>
+                <div id="accountList"><div class="skeleton">Memuat...</div></div>
+            </section>
+
+            <!-- Jurnal -->
+            <section class="card">
+                <h3>LEMBAR CATATAN HARIAN <small>(Jurnal)</small></h3>
+                <div id="journalList"><div class="skeleton">Memuat...</div></div>
+                <a class="more-link" href="buku-kas.html" id="moreLink" hidden>Lihat semua catatan</a>
+                <button class="btn-add" id="btnAdd"><i class="fa-solid fa-plus"></i> CATAT BARU</button>
+            </section>
+
+            <!-- Target -->
+            <section class="card">
+                <div class="card-head">
+                    <h3>POS TABUNGAN &amp; TARGET</h3>
+                    <a class="card-link" href="target.html">Kelola</a>
+                </div>
+                <div id="savingList"><div class="skeleton">Memuat...</div></div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" id="bottomNav"></nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/bank.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/realtime.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

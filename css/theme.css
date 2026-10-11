@@ -1,0 +1,536 @@
+/* =========================================================
+   DUITIE - tema bersama (diambil dari beranda baru)
+   Dipakai: dashboard, buku-kas, laporan, rekening
+   ========================================================= */
+@import url("nav.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+}
+
+/* elemen yang disembunyikan JS (pindah halaman) */
+[hidden] {
+    display: none !important;
+}
+
+body {
+    background-color: #ede4ff;
+    display: flex;
+    justify-content: center;
+    color: #3b2f57;
+}
+
+/* ===== Pembungkus halaman ===== */
+.app-page {
+    
+
+    background-image: url('../assets/bg-lands.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ede4ff;
+
+    width: 100%;
+    max-width: 1920px;
+    min-height: 100vh;
+    position: relative;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding-bottom: 96px;
+    overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    padding-top: 24px;
+}
+
+.logo h1 {
+    color: #8b5cf6;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+header h2 {
+    font-size: 16px;
+    color: #3b2f57;
+    margin: 10px 0 25px;
+}
+
+.month-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+    color: #6d28d9;
+    border: 2px solid rgba(200, 182, 255, 0.6);
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.month-select:hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+.month-select .fa-chevron-down {
+    font-size: 12px;
+}
+
+/* ===== Konten utama & kartu ===== */
+main {
+    padding: 20px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(250, 247, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.08);
+    border: 1.5px solid rgba(200, 182, 255, 0.5);
+}
+
+.card h3 {
+    font-size: 13px;
+    color: #7c6f9c;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card h3 small {
+    text-transform: none;
+    font-weight: 400;
+}
+
+/* ===== Utility teks ===== */
+.text-green { color: #10b981; font-weight: 600; }
+.text-red   { color: #ef4444; font-weight: 600; }
+
+.empty {
+    text-align: center;
+    color: #a99bc4;
+    font-size: 13px;
+    padding: 14px 0;
+}
+
+/* ===== Recap ===== */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.total-box {
+    background: linear-gradient(90deg, #efe8ff 0%, #e1e9ff 100%);
+    border: 1.5px solid rgba(139, 92, 246, 0.35);
+    padding: 12px;
+    border-radius: 8px;
+    color: #3f1f9a;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 0;
+    box-shadow: 0 3px 8px rgba(167, 139, 250, 0.25);
+}
+
+/* ===== Tabungan & progress ===== */
+.saving-item {
+    margin-bottom: 18px;
+}
+
+.saving-item:last-child {
+    margin-bottom: 0;
+}
+
+.saving-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #3b2f57;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+    background-color: rgba(200, 182, 255, 0.25);
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.4s ease-in-out;
+}
+
+.saving-item small {
+    font-size: 11px;
+    color: #7c6f9c;
+}
+
+/* ===== Laporan ===== */
+.report-row {
+    margin-bottom: 14px;
+}
+
+.report-row:last-child {
+    margin-bottom: 0;
+}
+
+.report-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* ===== Jurnal ===== */
+.journal-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(200, 182, 255, 0.5);
+}
+
+.journal-item:last-of-type {
+    border-bottom: none;
+}
+
+.icon-box {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 15px;
+    font-size: 16px;
+    box-shadow: 0 3px 8px rgba(139, 92, 246, 0.2);
+}
+
+.journal-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-info .date {
+    font-size: 11px;
+    color: #7c6f9c;
+}
+
+.journal-info .title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b2f57;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.journal-item .amount {
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 0 4px 0 10px;
+}
+
+/* tombol kecil (hapus / setor) */
+.mini-btn {
+    border: none;
+    background: transparent;
+    color: #a99bc4;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.mini-btn:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.mini-btn.green:hover {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+/* ===== Tombol utama ===== */
+.btn-add {
+    width: 100%;
+    background: linear-gradient(90deg, #6d4fe0 0%, #7d62ea 55%, #7f8eea 100%);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(167, 139, 250, 0.4);
+    transition: 0.3s;
+}
+
+.btn-add + .btn-add {
+    margin-top: 10px;
+}
+
+.btn-add:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(167, 139, 250, 0.55);
+}
+
+.btn-add:active {
+    transform: translateY(0);
+}
+
+/* ===== Modal (form popup) ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(59, 47, 87, 0.45);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+.modal {
+    background: #faf7ff;
+    border-radius: 18px;
+    padding: 22px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 1.5px solid rgba(200, 182, 255, 0.6);
+}
+
+.modal h3 {
+    color: #6d28d9;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.modal label {
+    display: block;
+    font-size: 12px;
+    color: #7c6f9c;
+    font-weight: 600;
+    margin: 10px 0 4px;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(200, 182, 255, 0.8);
+    background: #fff;
+    font-size: 15px;
+    color: #3b2f57;
+    outline: none;
+    transition: 0.2s;
+}
+
+.modal input:focus,
+.modal select:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 11px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cancel {
+    background: #e9e1ff;
+    color: #4c2aa8;
+}
+
+.btn-save {
+    background: linear-gradient(90deg, #6d4fe0, #7f8eea);
+    color: #fff;
+}
+
+.modal-actions button:hover {
+    opacity: 0.85;
+}
+
+/* ===== Layar kecil (HP) ===== */
+@media (max-width: 480px) {
+    .logo h1 { font-size: 28px; }
+    .month-select { font-size: 16px; }
+    main { padding: 14px; }
+    .card { padding: 15px; }
+    .icon-box { margin-right: 12px; }
+}
+
+/* =========================================================
+   Komponen tambahan (konsisten dengan tema beranda)
+   ========================================================= */
+.page-sub { font-size: 13px; color: #7c6f9c; margin: -16px 0 18px; }
+.greeting { font-size: 14px; color: #6d28d9; margin-bottom: 4px; font-weight: 500; }
+
+/* link kecil di dalam kartu */
+.card-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; gap: 10px; }
+.card-head h3 { margin-bottom: 0; }
+.card-link { font-size: 12px; font-weight: 600; color: #8b5cf6; text-decoration: none; white-space: nowrap; }
+.card-link:hover { text-decoration: underline; }
+
+/* kartu saldo utama */
+.hero {
+    background: linear-gradient(135deg, #5b3fd1 0%, #7656e6 55%, #7f8bea 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 24px rgba(139, 92, 246, 0.35);
+}
+.hero h3 { color: rgba(255, 255, 255, 0.92); margin-bottom: 6px; }
+.hero .big { font-size: 30px; font-weight: 700; line-height: 1.2; word-break: break-word; }
+.hero .sub { font-size: 12px; color: rgba(255, 255, 255, 0.85); margin-top: 4px; }
+.hero .hero-actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.hero .chip { background: rgba(255, 255, 255, 0.22); color: #fff; border: none; }
+.hero .chip:hover { background: rgba(255, 255, 255, 0.35); }
+
+.chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 13px; border-radius: 18px; font-size: 12px; font-weight: 600;
+    background: rgba(200, 182, 255, 0.28); color: #6d28d9; border: none;
+    cursor: pointer; text-decoration: none; transition: 0.2s;
+}
+.chip:hover { background: rgba(167, 139, 250, 0.4); }
+.chip.danger { color: #ef4444; background: rgba(239, 68, 68, 0.08); }
+.chip.danger:hover { background: rgba(239, 68, 68, 0.16); }
+
+/* kontrol filter */
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.filters > * { flex: 1 1 130px; min-width: 0; }
+.field {
+    width: 100%; padding: 10px 12px; border-radius: 12px;
+    border: 1.5px solid rgba(200, 182, 255, 0.8); background: #fff;
+    font-size: 14px; color: #3b2f57; outline: none; transition: 0.2s;
+}
+.field:focus { border-color: #8b5cf6; box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15); }
+
+.segmented {
+    display: flex; background: rgba(200, 182, 255, 0.25); border-radius: 14px;
+    padding: 4px; gap: 4px; margin-bottom: 18px;
+}
+.segmented button {
+    flex: 1; border: none; background: transparent; padding: 9px 6px; border-radius: 11px;
+    font-weight: 600; font-size: 13px; color: #7c6f9c; cursor: pointer; transition: 0.2s;
+}
+.segmented button.active { background: #fff; color: #6d28d9; box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2); }
+
+/* jurnal: keterangan kedua & transfer */
+.journal-info .sub { font-size: 11px; color: #a99bc4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.text-purple { color: #6d28d9; font-weight: 600; }
+.more-link { display: block; text-align: center; margin-top: 4px; font-size: 13px; font-weight: 600; color: #8b5cf6; text-decoration: none; }
+.more-link:hover { text-decoration: underline; }
+
+/* lencana bank */
+.badge-bank {
+    flex-shrink: 0; width: 42px; height: 42px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.3px;
+    box-shadow: 0 3px 8px rgba(139, 92, 246, 0.2);
+}
+.acct-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px dashed rgba(200, 182, 255, 0.5); }
+.acct-row:last-child { border-bottom: none; padding-bottom: 0; }
+.acct-row .info { flex: 1; min-width: 0; }
+.acct-row .name { font-size: 14px; font-weight: 600; color: #3b2f57; }
+.acct-row .meta { font-size: 11px; color: #7c6f9c; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.acct-row .bal { font-size: 14px; font-weight: 700; color: #3b2f57; white-space: nowrap; }
+
+/* rekap per rekening di laporan */
+.mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; font-size: 12px; }
+.mini-stats span { display: flex; justify-content: space-between; }
+
+/* batang tren */
+.report-top .val { font-weight: 600; }
+
+/* toast */
+#toast {
+    position: fixed; left: 50%; bottom: 100px; transform: translate(-50%, 20px);
+    background: #3b2f57; color: #fff; padding: 11px 18px; border-radius: 20px;
+    font-size: 13px; font-weight: 500; opacity: 0; pointer-events: none;
+    transition: 0.3s; z-index: 1200; max-width: calc(100% - 40px); text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* modal tambahan */
+.modal { max-height: calc(100vh - 40px); overflow-y: auto; }
+.modal.wide { max-width: 480px; }
+.modal p.hint { font-size: 12px; color: #7c6f9c; line-height: 1.5; margin: 6px 0 0; }
+.modal .code {
+    background: #f3eeff; border: 1px solid rgba(200, 182, 255, 0.7); border-radius: 10px;
+    padding: 9px 11px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11.5px;
+    color: #3b2f57; word-break: break-all; white-space: pre-wrap; max-height: 150px; overflow: auto;
+}
+.modal .copy-row { display: flex; gap: 8px; align-items: flex-start; }
+.modal .copy-row .code { flex: 1; }
+.modal .btn-mini {
+    border: none; background: #e9e1ff; color: #6d28d9; border-radius: 10px; padding: 8px 11px;
+    font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap;
+}
+.modal .btn-mini:hover { background: #ddd0ff; }
+.preview-list { margin-top: 10px; max-height: 190px; overflow: auto; border: 1px solid rgba(200, 182, 255, 0.5); border-radius: 10px; background: #fff; }
+.preview-list div { display: flex; justify-content: space-between; gap: 8px; padding: 7px 10px; font-size: 12px; border-bottom: 1px dashed rgba(200, 182, 255, 0.5); }
+.preview-list div:last-child { border-bottom: none; }
+.preview-list span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.check-row { display: flex !important; align-items: center; gap: 8px; margin-top: 12px !important; font-weight: 500 !important; }
+.check-row input { width: auto !important; }
+
+.notice {
+    font-size: 12.5px; line-height: 1.55; color: #5b4b86;
+    background: rgba(200, 182, 255, 0.2); border: 1px dashed rgba(139, 92, 246, 0.45);
+    border-radius: 12px; padding: 12px 14px;
+}
+.notice b { color: #6d28d9; }
+
+.skeleton { text-align: center; color: #a99bc4; font-size: 13px; padding: 14px 0; }
+
+body.has-bottom-nav { padding-bottom: 0; }

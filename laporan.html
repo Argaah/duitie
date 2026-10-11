@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan - Duitie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="laporan">
+
+    <div class="app-page">
+        <header>
+            <div class="logo">
+                <h1>Duitie</h1>
+            </div>
+            <h2>Laporan &amp; Rekap Catatan</h2>
+            <div class="month-select" id="monthSelect">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span id="monthLabel"></span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="segmented" id="modeTabs" role="tablist">
+                <button type="button" data-mode="mingguan">Mingguan</button>
+                <button type="button" data-mode="bulanan" class="active">Bulanan</button>
+                <button type="button" data-mode="tahunan">Tahunan</button>
+            </div>
+
+            <!-- Rekap -->
+            <section class="card">
+                <h3 id="judul-rekap">Rekap Kalkulasi Catatan</h3>
+                <div class="row">
+                    <span>Pemasukan:</span>
+                    <span class="text-green" id="total-masuk">+Rp 0</span>
+                </div>
+                <div class="row">
+                    <span>Pengeluaran:</span>
+                    <span class="text-red" id="total-keluar">-Rp 0</span>
+                </div>
+                <div class="row total-box">
+                    <span>SELISIH KAS:</span>
+                    <span id="total-selisih">Rp 0</span>
+                </div>
+            </section>
+
+            <!-- Persentase kategori -->
+            <section class="card">
+                <h3>LAPORAN PENGELUARAN <small>(per kategori)</small></h3>
+                <div id="tabel-kategori"></div>
+            </section>
+
+            <!-- Tren -->
+            <section class="card">
+                <h3 id="judul-tren">Tren Pengeluaran Mingguan</h3>
+                <div id="tabel-tren"></div>
+            </section>
+
+            <!-- Per rekening -->
+            <section class="card">
+                <div class="card-head">
+                    <h3>ARUS KAS PER REKENING</h3>
+                    <a class="card-link" href="rekening.html">Kelola</a>
+                </div>
+                <div id="tabel-rekening"></div>
+            </section>
+
+            <button class="btn-add" id="btn-unduh"><i class="fa-solid fa-file-arrow-down"></i> UNDUH REKAP (PDF/EXCEL)</button>
+        </main>
+
+        <nav class="bottom-nav" id="bottomNav"></nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/bank.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/laporan.js"></script>
+</body>
+</html>

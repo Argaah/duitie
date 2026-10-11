@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Duitie membantu kamu mengelola penghasilan dan pengeluaran dengan lebih mudah."
+    >
+    <meta name="theme-color" content="#f8f9fe">
+
+    <title>Masuk | Duitie</title>
+
+    <link rel="icon" href="assets/logo.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body>
+    <main class="app">
+
+        <!-- BRAND -->
+        <section class="brand-section" aria-label="Tentang Duitie">
+            <img
+                class="logo-brand"
+                src="assets/logo.png"
+                alt="Logo Duitie"
+                width="220"
+                height="220"
+            >
+
+            <h1 class="title-brand">duitie</h1>
+
+            <p class="slogan-brand">
+                Duit Utility for Tracking Income &amp; Expense
+            </p>
+
+            <p class="subtitle-brand">
+                Kelola penghasilan dan pengeluaranmu dengan lebih mudah,
+                untuk masa depan yang lebih baik.
+            </p>
+        </section>
+
+        <!-- LOGIN -->
+        <section class="login-section" aria-labelledby="login-title">
+
+            <header class="login-header">
+                <h2 class="login-title" id="login-title">
+                    Selamat Datang!
+                </h2>
+
+                <p class="login-subtitle">
+                    Masuk ke akun Duitie kamu untuk mulai mengelola
+                    keuangan dengan lebih baik.
+                </p>
+            </header>
+
+            <form class="login-form" id="login-form">
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label class="input-label" for="email">
+                        Email
+                    </label>
+
+                    <div class="input-wrapper">
+                        <img
+                            class="input-icon"
+                            src="assets/email.png"
+                            alt=""
+                            aria-hidden="true"
+                            width="22"
+                            height="22"
+                        >
+
+                        <input
+                            class="login-input"
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="nama@email.com"
+                            autocomplete="username"
+                            autocapitalize="none"
+                            spellcheck="false"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label class="input-label" for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+                        <img
+                            class="input-icon"
+                            src="assets/password.png"
+                            alt=""
+                            aria-hidden="true"
+                            width="22"
+                            height="22"
+                        >
+
+                        <input
+                            class="login-input password-input"
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Masukkan password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            class="password-toggle"
+                            id="password-toggle"
+                            type="button"
+                            aria-label="Tampilkan password"
+                            aria-pressed="false"
+                        >
+                            Lihat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- OPTIONS -->
+                <div class="form-options">
+                    <label class="remember-me" for="ingat-saya">
+                        <input
+                            class="checkbox-input"
+                            type="checkbox"
+                            name="remember"
+                            id="ingat-saya"
+                        >
+                        <span>Ingat saya</span>
+                    </label>
+
+                    <a
+                        class="forget-password-link"
+                        href="forgot-password.html"
+                    >
+                        Lupa password?
+                    </a>
+                </div>
+
+                <!-- SUBMIT -->
+                <button class="login-button" type="submit">
+                    <span>Masuk</span>
+                </button>
+
+            </form>
+
+            <p
+                class="form-message"
+                id="form-message"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+            <!-- ALTERNATIVE LOGIN -->
+            <div class="options" aria-label="Pilihan login lainnya">
+                <span class="divider-line"></span>
+                <span>atau lanjut dengan</span>
+                <span class="divider-line"></span>
+            </div>
+
+            <div class="login-with">
+                <button
+                    class="button-another-login"
+                    type="button"
+                    id="google-login"
+                >
+                    <img src="assets/google.png" alt="" width="20" height="20">
+                    <span>Google</span>
+                </button>
+
+                <button
+                    class="button-another-login"
+                    type="button"
+                    id="phone-login"
+                >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6c5ce0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+                    <span>Nomor HP</span>
+                </button>
+            </div>
+
+            <!-- REGISTRATION -->
+            <p class="registration">
+                Belum punya akun?
+                <a href="register.html">Daftar di sini</a>
+            </p>
+
+        </section>
+    </main>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
